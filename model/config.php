@@ -2,5 +2,5 @@
 $db_host = "localhost";
 $db_user = "root";
 $db_pass = "shadowfax";
-$db_db   = "cuponperfumes";
+$db_db   = "eollice";
 ?>

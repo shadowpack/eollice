@@ -22,15 +22,11 @@
 	<!-- INCLUIMOS EL HEADER -->
 	<?php require_once("view/header.php"); ?>
 	<!-- ELEMENTOS DE BODY -->
-	<div class="jumbotron" style="background:url(images/landinglogo.png);">
+	<div class="jumbotron" >
   		<div class="container">
-  			<h1>Bienvenido a Eollice</h1>
-  			<p><br>La primera plataforma de inversion en energias renovables de Chile</p>
-  			<p>Eollice conecta a personas para financiar colectivamente proyectos de energías renovables
-  			<p>Has crecer tu dinero con energias limpias</p>
-    		<p><br><a class="btn btn-primary btn-lg">Leer Mas</a></p>
+        <img src="images/principal.png" />
   		</div>
-  	</div>
+  </div>
   	<div class="container">
   		<form class="form-inline" role="form">
   			<div class="form-group input-group-400">

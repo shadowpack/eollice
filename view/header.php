@@ -3,9 +3,11 @@
 		<a class="navbar-brand" href="#">Eollice</a>
 		<div class="navbar-collapse collapse">
 	        <ul class="nav navbar-nav">
-	            <li class="active"><a href="#">Home</a></li>
-	            <li><a href="#about">Nosotros</a></li>
+	            <li><a href="#">Como funciona</a></li>
+	            <li><a href="#about">Proyectos</a></li>
+	            <li><a href="#contact">Quienes Somos</a></li>
 	            <li><a href="#contact">Contacto</a></li>
+	            <li><a href="#contact">FAQ</a></li>
 	        </ul>
 			<form class="navbar-form navbar-right">
 				<div class="form-group">

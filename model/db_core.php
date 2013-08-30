@@ -40,7 +40,7 @@ class db_core
 	}
 	function reg_one($consulta)
 	{
-		$action = mysql_query($consulta, $this->con);
+		$action = $this->query($consulta);
 		if(!$action)
 		{
 			die("Imposible ejecutar consulta : ".$consulta);
@@ -54,7 +54,7 @@ class db_core
 	
 	function num_one($consulta)
 	{
-		$action = mysql_query($consulta, $this->con);
+		$action = $this->query($consulta);
 		if(!$action)
 		{
 			die("Imposible ejecutar consulta : ".$consulta);
@@ -63,6 +63,49 @@ class db_core
 		{
 			$result = mysql_num_rows($action);
 			return $result;
+		}
+	}
+	function insert($table,$value){
+		$cadena = "INSERT INTO ".$table." (";
+		foreach($value as $key => $vector){
+			$cadena .= "`".$key."`,";
+		}
+		$cadena = substr($cadena, 0, -1);
+		$cadena .=") VALUES (";
+		foreach($value as $key => $vector){
+			$cadena .= "'".$vector."',";
+		}
+		$cadena = substr($cadena, 0, -1);
+		$cadena .= ");";
+		if($this->query($cadena))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	function isExists($table,$campo,$value){
+		$consulta = $this->query("SELECT * FROM ".$table." as t WHERE t.".$campo."='".$value."'");
+		if(mysql_num_rows($consulta) > 0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	function delete($table, $campo,$valor)
+	{
+		if($this->query("DELETE FROM ".$table." WHERE ".$campo."='".$valor."'"))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
 		}
 	}
 }
