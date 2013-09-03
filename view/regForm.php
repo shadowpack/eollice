@@ -1,4 +1,5 @@
 <script src="controller/regForm.js"></script>
+<link rel="stylesheet" href="css/regForm.css">
 <!-- Modal -->
   <div class="modal fade" id="RegForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -7,8 +8,9 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h4 class="modal-title">Registrate en Eollice</h4>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" id="modal-reg">
           <form role="form">
+            <label class="messageinput">El E-mail indicado ya exite en nuestros registros.</label>
             <div class="form-group">
               <label for="emailInput">E-Mail</label>
               <div class="input-group">
@@ -44,6 +46,9 @@
               </label>
             </div>
           </form>
+        </div>
+        <div class="modal-body" id="modal-success">
+          <label for="emailInput">Gracias por registrate, <br>te hemos enviado un E-Mail con los datos de activación.</label>
         </div>
         <div class="modal-footer">
           <button type="button" id="regButton" class="btn btn-primary">Registrarse</button>

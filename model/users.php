@@ -24,7 +24,7 @@ class generic extends webservice
 			$matriz['email'] = $opt->email;
 			$matriz['password'] = md5($opt->password);
 			$matriz['active'] = 0;
-			$matriz['opeToken'] = $this->getToken();
+			$matriz['opeToken'] = $this->getToken('users','opeToken');
 			if($dbo->insert('users', $matriz))
 			{
 				$email = new mail();
