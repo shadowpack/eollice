@@ -85,5 +85,6 @@
 	<!-- INCLUIMOS LAS CAPAS MODALES -->
 	<?php require_once("view/regForm.php"); ?>
 	<?php require_once("view/forgotPassword.php"); ?>
+  <?php require_once("view/activeForm.php"); ?>
 </body>
 </html>

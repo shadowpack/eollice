@@ -25,7 +25,7 @@ class generic extends webservice
 			$matriz['password'] = md5($opt->password);
 			$matriz['active'] = 0;
 			$matriz['opeToken'] = $this->getToken('users','opeToken');
-			if($dbo->insert('users', $matriz))$matriz['opeToken'] = $this->getToken('users','opeToken');
+			if($dbo->insert('users', $matriz))
 			{
 				$email = new mail();
 				if($email->sendRegMail($opt->email, $matriz['opeToken']))
@@ -78,7 +78,7 @@ class generic extends webservice
 		}
 		else
 		{
-
+			$this->returnData(array("status"=>1));
 		}
 	}
 	function activeUser($opt){
@@ -86,7 +86,8 @@ class generic extends webservice
 		// 0: TOKEN INVALIDO
 		// 1: OPERACION EXITOSA
 		// 2: NO SE PUDO EJECUTAR LA CONSULTA SQL
-		if(!$dbo->isExists('users','opeToken',$opt->token))
+		$dbo = $this->db;
+		if($dbo->isExists('users','opeToken',$opt->token))
 		{	
 			$matriz['active'] = 1;
 			$matriz['opeToken'] = '';

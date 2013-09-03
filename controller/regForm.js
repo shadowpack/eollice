@@ -16,6 +16,7 @@ $(document).ready(function() {
 					vars: JSON.stringify(packet)
 				},
 				success:function(resultado){
+					alert(resultado);
 					$(".has-error").each(function(key,value){
 						$(this).removeClass('has-error');
 					});
