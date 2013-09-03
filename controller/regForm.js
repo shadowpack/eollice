@@ -16,6 +16,9 @@ $(document).ready(function() {
 					vars: JSON.stringify(packet)
 				},
 				success:function(resultado){
+					$(".has-error").each(function(key,value){
+						$(this).removeClass('has-error');
+					});
 					var result = JSON.parse(resultado);
 					if(result.status == 0){
 						$("#modal-reg").hide();
@@ -25,7 +28,7 @@ $(document).ready(function() {
 					else if(result.status == 1){
 						$(".messageinput").show();
 						$(".messageinput").html("El E-mail indicado ya exite en nuestros registros.");
-						$("#email").addClass('.has-error');
+						$("#email").parent().addClass('has-error');
 					}
 					else if(result.status == 2){
 						$("#modal-reg").hide();
@@ -44,13 +47,13 @@ $(document).ready(function() {
 		{
 			$(".messageinput").show();
 			$(".messageinput").html("Las contraseñas indicadas no coinciden.");
-			$("#password").addClass('.has-error');
-			$("#repeatPassword").addClass('.has-error');
+			$("#password").parent().addClass('has-error');
+			$("#repeatPassword").parent().addClass('has-error');
 		}
-		else if($("#acepto").is(':checked')){
+		else if(!$("#acepto").is(':checked')){
 			$(".messageinput").show();
 			$(".messageinput").html("Debe aceptar las condiciones y terminos de uso.");
-			$("#acepto").addClass('.has-error');
+			$("#acepto").parent().addClass('has-error');
 		}
 	});
 	// EVENTO QUE CONTROLA EL CLICK EN NO TIENES CUENTA
@@ -62,8 +65,11 @@ $(document).ready(function() {
 		$(".messageinput").hide();
 		$("#modal-status3").hide();
 		$("#regButton").show();
-		$("#email").removeClass('.has-error');
-		$("#password").removeClass('.has-error');
-		$("#repeatPassword").removeClass('.has-error');
+		$(".has-error").each(function(key,value){
+			$(this).removeClass('has-error');
+		});
+		$(".form-control").each(function(key,value){
+			$(this).val('');
+		});
 	});
 });

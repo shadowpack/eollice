@@ -10,7 +10,7 @@
         </div>
         <div class="modal-body" id="modal-reg">
           <form role="form">
-            <label class="messageinput">El E-mail indicado ya exite en nuestros registros.</label>
+            <label class="messageinput text-danger"></label>
             <div class="form-group">
               <label for="emailInput">E-Mail</label>
               <div class="input-group">

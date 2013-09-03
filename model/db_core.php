@@ -86,6 +86,26 @@ class db_core
 			return false;
 		}
 	}
+	function update($table,$value, $where){
+		$cadena = "UPDATE ".$table." SET ";
+		foreach($value as $key => $vector){
+			$cadena .= "`".$key."`='".$vector."',";
+		}
+		$cadena = substr($cadena, 0, -1);
+		$cadena .= " WHERE ";
+		foreach($where as $key => $vector){
+			$cadena .= $table.".".$key."='".$vector."' AND ";
+		}
+		$cadena = substr($cadena, 0, -5);
+		if($this->query($cadena))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 	function isExists($table,$campo,$value){
 		$consulta = $this->query("SELECT * FROM ".$table." as t WHERE t.".$campo."='".$value."'");
 		if(mysql_num_rows($consulta) > 0)

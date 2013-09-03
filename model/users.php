@@ -25,7 +25,7 @@ class generic extends webservice
 			$matriz['password'] = md5($opt->password);
 			$matriz['active'] = 0;
 			$matriz['opeToken'] = $this->getToken('users','opeToken');
-			if($dbo->insert('users', $matriz))
+			if($dbo->insert('users', $matriz))$matriz['opeToken'] = $this->getToken('users','opeToken');
 			{
 				$email = new mail();
 				if($email->sendRegMail($opt->email, $matriz['opeToken']))
@@ -49,8 +49,37 @@ class generic extends webservice
 		}
 	}
 	function passwordForget($opt){
+		// PUEDEN EXISTIR 3 ESTADOS A LA OPERACION (status)
+		// 0: OPERACION EXITOSA
+		// 1: EL USUARIO YA EXISTE
+		// 2: EXISTIO UN ERROR AL CREARLO POR DB
+		// 3: NO SE PUDO ENVIAR EL EMAIL
 		$dbo = $this->db;
+		if(!$dbo->isExists('users','email',$opt->email))
+		{
+			$where['email'] = $opt->email;
+			$matriz['opeToken'] = $this->getToken('users','opeToken');
+			if($dbo->update('users', $matriz, $where))
+			{
+				$email = new mail();
+				if($email->sendForgotMail($opt->email, $matriz['opeToken']))
+				{
+					$this->returnData(array("status"=>0));
+				}
+				else
+				{
+					$this->returnData(array("status"=>3));
+				}
+			}
+			else
+			{
+				$this->returnData(array("status"=>2));
+			}
+		}
+		else
+		{
 
+		}
 	}
 }
 include("handler.php");
