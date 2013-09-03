@@ -81,6 +81,30 @@ class generic extends webservice
 
 		}
 	}
+	function activeUser($opt){
+		// PUEDEN EXISTIR 3 ESTADOS A LA OPERACION (status)
+		// 0: TOKEN INVALIDO
+		// 1: OPERACION EXITOSA
+		// 2: NO SE PUDO EJECUTAR LA CONSULTA SQL
+		if(!$dbo->isExists('users','opeToken',$opt->token))
+		{	
+			$matriz['active'] = 1;
+			$matriz['opeToken'] = '';
+			$where['opeToken'] = $opt->token;
+			if($dbo->update('users', $matriz, $where))
+			{
+				header('Location: ../index.php?active=1');
+			}
+			else
+			{
+				header('Location: ../index.php?active=2');
+			}
+		}
+		else
+		{
+			header('Location: ../index.php?active=0');
+		}
+	}
 }
 include("handler.php");
 ?>

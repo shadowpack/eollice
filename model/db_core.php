@@ -66,14 +66,14 @@ class db_core
 		}
 	}
 	function insert($table,$value){
-		$cadena = "INSERT INTO ".$table." (";
+		$cadena = "INSERT INTO ".mysql_real_escape_string($table)." (";
 		foreach($value as $key => $vector){
-			$cadena .= "`".$key."`,";
+			$cadena .= "`".mysql_real_escape_string($key)."`,";
 		}
 		$cadena = substr($cadena, 0, -1);
 		$cadena .=") VALUES (";
 		foreach($value as $key => $vector){
-			$cadena .= "'".$vector."',";
+			$cadena .= "'".mysql_real_escape_string($vector)."',";
 		}
 		$cadena = substr($cadena, 0, -1);
 		$cadena .= ");";
@@ -87,14 +87,14 @@ class db_core
 		}
 	}
 	function update($table,$value, $where){
-		$cadena = "UPDATE ".$table." SET ";
+		$cadena = "UPDATE ".mysql_real_escape_string($table)." SET ";
 		foreach($value as $key => $vector){
-			$cadena .= "`".$key."`='".$vector."',";
+			$cadena .= "`".mysql_real_escape_string($key)."`='".mysql_real_escape_string($vector)."',";
 		}
 		$cadena = substr($cadena, 0, -1);
 		$cadena .= " WHERE ";
 		foreach($where as $key => $vector){
-			$cadena .= $table.".".$key."='".$vector."' AND ";
+			$cadena .= mysql_real_escape_string($table).".".mysql_real_escape_string($key)."='".mysql_real_escape_string($vector)."' AND ";
 		}
 		$cadena = substr($cadena, 0, -5);
 		if($this->query($cadena))
@@ -107,7 +107,7 @@ class db_core
 		}
 	}
 	function isExists($table,$campo,$value){
-		$consulta = $this->query("SELECT * FROM ".$table." as t WHERE t.".$campo."='".$value."'");
+		$consulta = $this->query("SELECT * FROM ".mysql_real_escape_string($table)." as t WHERE t.".mysql_real_escape_string($campo)."='".mysql_real_escape_string($value)."'");
 		if(mysql_num_rows($consulta) > 0)
 		{
 			return true;
@@ -119,7 +119,7 @@ class db_core
 	}
 	function delete($table, $campo,$valor)
 	{
-		if($this->query("DELETE FROM ".$table." WHERE ".$campo."='".$valor."'"))
+		if($this->query("DELETE FROM ".mysql_real_escape_string($table)." WHERE ".mysql_real_escape_string($campo)."='".mysql_real_escape_string($valor)."'"))
 		{
 			return true;
 		}
