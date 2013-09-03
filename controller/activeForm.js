@@ -1,7 +1,7 @@
 // JavaScript Document
 $(document).ready(function() {
 	if(getUrlVars()['active'] == 0){
-		$("#activeAsk").html('El token utilizado es invalido.');
+		$("#activeAsk").html('El token utilizado es invalido, ya expiro o su cuenta ya se encuentra activada.');
 		$("#ActiveUser").modal('toggle');
 	}
 	else if(getUrlVars()['active'] == 1){
