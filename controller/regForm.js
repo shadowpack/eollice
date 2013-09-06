@@ -1,7 +1,7 @@
 // JavaScript Document
 $(document).ready(function() {
 	$("#regButton").click(function(){
-		if(($("#password").val() == $("#repeatPassword").val()) && $("#acepto").is(':checked'))
+		if(($("#password").val() == $("#repeatPassword").val()) && $("#checkForgot").is(':checked'))
 		{
 			var packet = {
 				name: $("#name").val(),

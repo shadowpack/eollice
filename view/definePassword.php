@@ -9,6 +9,7 @@
         </div>
         <div class="modal-body">
           <form role="form">
+            <label class="messageInputDefine text-danger"></label>
             <div class="form-group">
               <label for="password">Contraseña</label>
               <div class="input-group">
@@ -26,13 +27,13 @@
             <div class="checkbox">
               <label>
               <br>
-                <input type="checkbox" id="acepto" value="1"> Acepto las politicas de privacidad y uso.
+                <input type="checkbox" id="aceptoDefinePass" value="1"> Acepto las politicas de privacidad y uso.
               </label>
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Definir</button>
+          <button type="button" class="btn btn-primary" id="definePasswordBtn">Definir</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div><!-- /.modal-content -->

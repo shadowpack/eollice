@@ -9,20 +9,24 @@
         </div>
         <div class="modal-body">
           <form role="form">
+            <label class="messageinputForgot text-danger"></label>
             <div class="form-group">
               <label for="exampleInputEmail1">E-Mail</label>
               <div class="input-group">
                 <span class="input-group-addon">@</span>
-                <input type="text" class="form-control" placeholder="E-Mail">
+                <input type="text" class="form-control" placeholder="E-Mail" id="forgotEmail">
               </div>
             </div>
             <div class="checkbox">
               <label>
               <br>
-                <input type="checkbox"> Acepto las politicas de privacidad y uso.
+                <input type="checkbox" id="checkForgot"> Acepto las politicas de privacidad y uso.
               </label>
             </div>
           </form>
+        </div>
+        <div class="modal-body" id="modal-success">
+          <label for="emailInput">Te hemos enviado un E-Mail con los datos para recuperar tu contraseña.</label>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary">Recuperar</button>
