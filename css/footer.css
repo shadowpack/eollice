@@ -1,0 +1,23 @@
+.eollice-footer{
+	background: #38A3EC;
+	border-color: #CDF0F2;
+}
+.navbar-inverse .navbar-nav .eollice-text{
+	color: #FFF;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+.eollice-text-esp{
+	min-width: 200px;
+	text-align: center;
+}
+.eollice-text-esp-f{
+	min-width: 100px;
+	padding-left: 100px;
+	text-align: center;
+}
+.eollice-text-esp-r{
+	min-width: 170px;
+	padding-left: 100px;
+	text-align: center;
+}

@@ -1,0 +1,99 @@
+.jumboClass{
+	background-image:url(../images/Home1.png);
+	background-position: center;
+	background-color: #CDF0F2;
+	background-repeat: no-repeat;
+	height: 400px;
+}
+.footer{
+	background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+	background-repeat: repeat-x;
+	color: #999;
+}
+.login{
+	height: 365px;
+	border: 1px #38A3EC solid;
+	background: #38A3EC;
+	border-radius: 5px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+.proyecto{
+	height: 365px;
+	/*border: 1px #38A3EC solid;*/
+	background: #38A3EC;
+	border-radius: 5px;
+}
+.botones-reg{
+	height: 100px;
+	padding: 25px 15px 25px 15px;
+}
+.boton-eollice{
+	width: 100%;
+	height: 90px;
+	vertical-align: middle;
+	color: #FFF;
+}
+.logadd-div{
+	height: 365px;
+}
+.logadd{
+	width: 72%;
+	height: 100%;
+	border: 1px #38A3EC solid;
+	background: #38A3EC;
+	border-radius: 5px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+.boton-reg-eollice{
+	width: 100%;
+}
+.title-logform{
+	float: left;
+	height: 60px;
+	line-height: 60px;
+	vertical-align: middle;
+	color: #FFF;
+	font-family: "Helvetica";
+	font-weight: bold;
+	font-size: 20px;
+	padding-left: 15px;
+}
+.no-padding{
+	padding:0px 0px 0px 0px;
+	margin-bottom: 0px;
+}
+.headerAsk{
+	background: #38A3EC;
+	height: 75px;
+	color: #FFF;
+	font-family: "Helvetica";
+	font-weight: bold;
+	font-size: 20px;
+	padding-left: 15px;
+	padding-top: 10px;
+	text-align: center;
+}
+.headerContent{
+	height: 300px;
+	background: #FFF;
+	padding: 20px;
+}
+.headerContent .foto{
+	height: 200px;
+
+}
+.headerContent .botonDiv{
+	padding-top: 20px;
+	height: 45px;
+}
+.headerContent .btn-ask{
+	height: 45px;
+	width: 200px;
+	text-align: center;
+	position: relative;
+	left: 50%;
+	margin-left: -100px;
+}
+/*BOT CONTENT*/

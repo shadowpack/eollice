@@ -1,5 +1,13 @@
-<div class="navbar navbar-inverse navbar-fixed-bottom">
-	<div class="container">
-		<p class="col-md-12 navbar-text text-center">Eollice 2013</p>
+<link rel="stylesheet" href="css/footer.css">
+<div class="navbar navbar-inverse navbar-bottom eollice-footer no-padding">
+	<div class="container">	
+		<a class="navbar-brand" href="#"><img src="images/logo-blanco.png" height="20" /></a>
+		<ul class="nav navbar-nav eollice-text">
+	        <li><a class="eollice-text eollice-text-esp-f" href="#">Blog</a></li>
+	        <li><a class="eollice-text eollice-text-esp" href="#about">Terminos y condiciones de uso</a></li>
+	        <li><a class="eollice-text eollice-text-esp" href="#contact">Noticias Relacionadas</a></li>
+	        <li><a class="eollice-text eollice-text-esp-r" href="#contact">&nbsp;</a></li>
+	        <li><a class="eollice-text eollice-text-esp" href="#contact">© Copyright 2013 - Todos los derechos reservados</a></li>
+	    </ul>
 	</div>
 </div>

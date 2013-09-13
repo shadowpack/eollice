@@ -1,10 +1,13 @@
 body { 
 	padding-top: 50px;
-	padding-bottom: 20px; 
+	background: #CDF0F2;
 }
 .esp20{
 	height: 20px;
 }
 .esp40{
 	height: 40px;
+}
+.esp80{
+	height: 80px;
 }

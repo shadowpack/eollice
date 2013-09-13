@@ -55,7 +55,7 @@ class generic extends webservice
 		// 2: EXISTIO UN ERROR AL CREARLO POR DB
 		// 3: NO SE PUDO ENVIAR EL EMAIL
 		$dbo = $this->db;
-		if(!$dbo->isExists('users','email',$opt->email))
+		if($dbo->isExists('users','email',$opt->email))
 		{
 			$where['email'] = $opt->email;
 			$matriz['opeToken'] = $this->getToken('users','opeToken');
@@ -104,6 +104,31 @@ class generic extends webservice
 		else
 		{
 			header('Location: ../index.php?active=0');
+		}
+	}
+	function reDefinePassword($opt){
+		// PUEDEN EXISTIR 3 ESTADOS A LA OPERACION (status)
+		// 0: OPERACION EXITOSA
+		// 1: TOKEN INVALIDO
+		// 2: NO SE PUDO EJECUTAR LA CONSULTA SQL
+		$dbo = $this->db;
+		if($dbo->isExists('users','opeToken',$opt->token))
+		{	
+			$matriz['password'] = md5($opt->password);
+			$matriz['opeToken'] = '';
+			$where['opeToken'] = $opt->token;
+			if($dbo->update('users', $matriz, $where))
+			{
+				$this->returnData(array("status"=>0));
+			}
+			else
+			{
+				$this->returnData(array("status"=>2));
+			}
+		}
+		else
+		{
+			$this->returnData(array("status"=>1));
 		}
 	}
 }

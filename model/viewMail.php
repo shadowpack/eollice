@@ -4,7 +4,7 @@
 <body>
 	<div id="container" style="padding:10px 25% 10px 25%; background:#329BD8; height:490px;">
 		<img src="../images/blue_white_logo.php" height="90" />
-		<div id="containerbody" style="background:white; height:310px; padding:10px 20px 10px 20px; font-family:Helvetica; font-size:14px;">
+		<div id="containerbody" style="background:white; height:310px; padding:10px 20px 10px 20px; font-family:Helvetica; font-size:14px; width:660px; left:50%; margin-left:-330px;">
 			<div style="position:relative; height:35px; font-size:16px;">Hola,</div>
 			<div style="position:relative; color:#3ca9ec; height:45px; font-size:24px;">¡Bienvenido a la comunidad Eollice!</div>
 			<div style="position:relative;">Ya perteneces a la primera red de financiamiento colectivo para proyectos de energías renovables en Latinoamérica. Valida tu registro para finalizar el proceso.</div>

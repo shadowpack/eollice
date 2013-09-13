@@ -7,14 +7,14 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h4 class="modal-title">Escribe tu nueva contraseña</h4>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" id="define-body">
           <form role="form">
             <label class="messageInputDefine text-danger"></label>
             <div class="form-group">
               <label for="password">Contraseña</label>
               <div class="input-group">
                 <span class="input-group-addon">Password</span>
-                <input type="password" id="definePassword" class="form-control" placeholder="Contraseña">
+                <input type="password" id="definePasswordInput" class="form-control" placeholder="Contraseña">
               </div>
             </div>
             <div class="form-group">
@@ -31,6 +31,11 @@
               </label>
             </div>
           </form>
+        </div>
+        <div class="modal-body" id="define-success">
+          <div id="define-status0">Tu contraseña ha sido cambiada con exito<br> Ya puedes ingresar a la plataforma de Eollice.</div>
+          <div id="define-status2">Existe un error al modificar la base de datos<br> Contacte con el staff de Eollice.</div>
+          <div id="define-status1">El cambio de contraseña es invalido o ya fue efectuado anteriormente <br> Si los problemas persisten, contacte con el staff de Eollice.</div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" id="definePasswordBtn">Definir</button>

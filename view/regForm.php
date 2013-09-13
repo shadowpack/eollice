@@ -51,7 +51,7 @@
           <label for="emailInput">Gracias por registrate, <br>te hemos enviado un E-Mail con los datos de activación.</label>
         </div>
         <div class="modal-footer">
-          <button type="button" id="forgotButton" class="btn btn-primary">Registrarse</button>
+          <button type="button" id="regButton" class="btn btn-primary">Registrarse</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div><!-- /.modal-content -->

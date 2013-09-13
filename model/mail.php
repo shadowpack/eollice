@@ -8,9 +8,9 @@ class mail{
 		$asunto    = 'Registro en Eollice - Activacion de Cuenta';
 		$mensaje   = '<html>
 		<body>
-			<div id="container" style="padding:10px 0px 10px 0px; background:#329BD8; height:490px; width:660px; left:50%; margin-left:-330px; ">
+			<div id="container" style="padding:10px 20% 10px 20%; background:#329BD8; height:490px;">
 				<img src="http://www.eollice.com/images/blue_white_logo.png" height="90" />
-				<div id="containerbody" style="background:white; height:310px; padding:10px 20px 10px 20px; font-family:Helvetica; font-size:14px;">
+				<div id="containerbody" style="position:relative; background:white; height:310px; padding:10px 20px 10px 20px; font-family:Helvetica; font-size:14px;">
 					<div style="position:relative; height:35px; font-size:16px;">Hola,</div>
 					<div style="position:relative; color:#3ca9ec; height:45px; font-size:24px;">¡Bienvenido a la comunidad Eollice!</div>
 					<div style="position:relative;">Ya perteneces a la primera red de financiamiento colectivo para proyectos de energías renovables en Latinoamérica. Valida tu registro para finalizar el proceso.</div>
@@ -44,9 +44,9 @@ class mail{
 		$asunto    = 'Ingresar a Eollice - Recuperar Contraseña';
 		$mensaje   = '<html>
 		<body>
-			<div id="container" style="padding:10px 0px 10px 0px; background:#329BD8; height:490px; width:660px; left:50%; margin-left:-330px; ">
+			<div id="container" style="padding:10px 20% 10px 20%; background:#329BD8; height:490px;  ">
 				<img src="http://www.eollice.com/images/blue_white_logo.png" height="90" />
-				<div id="containerbody" style="background:white; height:310px; padding:10px 20px 10px 20px; font-family:Helvetica; font-size:14px;">
+				<div id="containerbody" style="position:relative; background:white; height:310px; padding:10px 20px 10px 20px; font-family:Helvetica; font-size:14px;">
 					<div style="position:relative; height:35px; font-size:16px;">Hola,</div>
 					<div style="position:relative; color:#3ca9ec; height:45px; font-size:24px;">Recupera tu contraseña</div>
 					<div style="position:relative;">Para este fin, haz click en el enlace a continuacion para de esta forma redefinir tu contraseña.</div>

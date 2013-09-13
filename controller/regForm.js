@@ -1,7 +1,7 @@
 // JavaScript Document
 $(document).ready(function() {
 	$("#regButton").click(function(){
-		if(($("#password").val() == $("#repeatPassword").val()) && $("#checkForgot").is(':checked'))
+		if(($("#password").val() == $("#repeatPassword").val()) && $("#acepto").is(':checked'))
 		{
 			var packet = {
 				name: $("#name").val(),
@@ -72,5 +72,9 @@ $(document).ready(function() {
 		$(".form-control").each(function(key,value){
 			$(this).val('');
 		});
+	});
+	// BOTON REGISTRATE
+	$(".RegFormBtn").click(function(){
+		$("#RegForm").modal('toggle');
 	});
 });

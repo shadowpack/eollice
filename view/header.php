@@ -1,22 +1,17 @@
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<link rel="stylesheet" href="css/header.css">
+<div class="navbar navbar-inverse navbar-fixed-top eollice-header" role="navigation" style="background:38A3E4;">
 	<div class="container">	
-		<a class="navbar-brand" href="#">Eollice</a>
+		<a class="navbar-brand" href="#"><img src="images/logo-blanco.png" height="20" /></a>
 		<div class="navbar-collapse collapse">
-	        <ul class="nav navbar-nav">
-	            <li><a href="#">Como funciona</a></li>
-	            <li><a href="#about">Proyectos</a></li>
-	            <li><a href="#contact">Quienes Somos</a></li>
-	            <li><a href="#contact">Contacto</a></li>
-	            <li><a href="#contact">FAQ</a></li>
+	        <ul class="nav navbar-nav eollice-text">
+	            <li><a class="eollice-text" href="#">Cómo funciona</a></li>
+	            <li><a class="eollice-text" href="#about">Proyectos</a></li>
+	            <li><a class="eollice-text" href="#contact">Quienes Somos</a></li>
+	            <li><a class="eollice-text" href="#contact">Contacto</a></li>
+	            <li><a class="eollice-text" href="#contact">Preguntas Frecuentes</a></li>
 	        </ul>
 			<form class="navbar-form navbar-right">
-				<div class="form-group">
-	              <input type="text" placeholder="Email" class="form-control">
-	            </div>
-	            <div class="form-group">
-	              <input type="text" placeholder="Password" class="form-control">
-	            </div>
-	            <button type="button" class="btn btn-success">Ingresar</button>
+	            <button type="button" class="btn btn-primary">Ingresar</button>
 			</form>
 		</div>
 	</div>
