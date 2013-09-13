@@ -5,10 +5,10 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Activacion de cuenta</h4>
+          <h4 class="modal-title">Activación de cuenta</h4>
         </div>
         <div class="modal-body" id="activeAsk">
-          Gracias por registrate, <br>tu cuenta se encuntra activada, ya puedes ingresar a eollice.
+          Gracias por registrate. <br>Tu cuenta se encuentra activada, ya puedes ingresar a Eollice.
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

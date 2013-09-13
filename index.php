@@ -41,12 +41,12 @@
 						<div class="form-group input-group-400">
 							<div class="input-group">
 							    <span class="input-group-addon">?</span>
-				 	 			<input type="text" class="form-control" placeholder="Contraseña" style="height:45px;">
+				 	 			<input type="password" class="form-control" placeholder="Contraseña" style="height:45px;">
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="input-group btn-login">
-							    <button type="button" class="btn btn-primary" style="height:50px; width:200px;">Ingresar a tu Cuenta</button>
+							    <button type="button" class="btn btn-primary" style="height:50px; width:280px;">Ingresar a tu Cuenta</button>
 							</div>
 						</div>
 						<p class="text-primary "><a data-toggle="modal" href="#forgotPassword" style="color:#FFF;">¿Olvidaste tu contraseña?</a></p>
@@ -56,8 +56,8 @@
 	        </div>
 	        <div class="col-md-1 logadd-div" style="padding:0px 0px 0px 0px;"><div class="logadd"></div></div>
 	        <div class="col-md-7 proyecto" style="padding:0px 0px 0px 0px;">
-	        	<div class="header-proyecto">Proyecto Solar de 20 kW para Metalmecánica, Copiapo</div>
-	        	<div class="foto-Proyecto"><img src="images/images-proyectos/1.png" width="390"></div>
+	        	<div class="header-proyecto">Proyecto Solar de 20 kW para Metalmecánica, Copiapó</div>
+	        	<div class="foto-Proyecto"><img src="images/images-proyectos/1.png" width="390" height="305"></div>
 	        	<div class="info-Proyecto">
 	        		<div class="info-inver-proyecto" id="cantidad">
 	        			<div class="info-title-proyecto">Cantidad Invertida</div>
@@ -73,21 +73,21 @@
 	        		</div>
 	        		<div class="info-inver-proyecto" id="cantidad">
 						<div class="input-group">
-						    <button type="button" class="btn btn-success btn-proyecto" style="height:45px;">Mas información del proyecto</button>
+						    <button type="button" class="btn btn-success btn-proyecto" style="height:45px;">Más información del proyecto</button>
 						</div>
 					</div>
 	        	</div>
 	        </div>    
         </div>
         <div class="row botones-reg">
-        	<div class="col-md-4">
+        	<div class="col-md-5">
         		<div class="input-group boton-reg-eollice">
 				    <button type="button" class="btn btn-primary boton-eollice RegFormBtn"><text style="font-size:30px;">Registrate Ahora</text><br>Se parte de la comunidad Eollice</button>
 				</div>
         	</div>
-        	<div class="col-md-7 col-md-offset-1">
+        	<div class="col-md-7">
         		<div class="input-group boton-reg-eollice">
-				    <button type="button" class="btn btn-primary boton-eollice"><text style="font-size:27px;">Conoce los proyectos de inversion</text></button>
+				    <button type="button" class="btn btn-primary boton-eollice"><text style="font-size:27px;">Conoce los proyectos de inversión</text></button>
 				</div>
         	</div>
         </div>
@@ -106,7 +106,7 @@
       			<div class="headerAsk">Cómo funciona Eollice</div>
       			<div class="headerContent">
       				<div class="foto"><img src="images/why2.png" height="200" /></div>
-      				<div class="botonDiv"><button type="button" class="btn btn-primary btn-ask" >¿Como Funciona Eollice?</button></div>
+      				<div class="botonDiv"><button type="button" class="btn btn-primary btn-ask" >¿Cómo Funciona Eollice?</button></div>
       			</div>
       		</div>
       		<div class="col-md-4 no-padding">

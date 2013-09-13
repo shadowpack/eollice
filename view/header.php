@@ -11,6 +11,7 @@
 	            <li><a class="eollice-text" href="#contact">Preguntas Frecuentes</a></li>
 	        </ul>
 			<form class="navbar-form navbar-right">
+				<button type="button" class="btn btn-primary RegFormBtn">Registrate</button>
 	            <button type="button" class="btn btn-primary">Ingresar</button>
 			</form>
 		</div>

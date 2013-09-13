@@ -8,7 +8,7 @@ class mail{
 		$asunto    = 'Registro en Eollice - Activacion de Cuenta';
 		$mensaje   = '<html>
 		<body>
-			<div id="container" style="padding:10px 20% 10px 20%; background:#329BD8; height:490px;">
+			<div id="container" style="padding:10px 15% 10px 15%; background:#329BD8; height:490px;">
 				<img src="http://www.eollice.com/images/blue_white_logo.png" height="90" />
 				<div id="containerbody" style="position:relative; background:white; height:310px; padding:10px 20px 10px 20px; font-family:Helvetica; font-size:14px;">
 					<div style="position:relative; height:35px; font-size:16px;">Hola,</div>

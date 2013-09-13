@@ -48,7 +48,7 @@
           </form>
         </div>
         <div class="modal-body" id="modal-success">
-          <label for="emailInput">Gracias por registrate, <br>te hemos enviado un E-Mail con los datos de activación.</label>
+          Gracias por registrate. <br>Te hemos enviado un e-mail con los datos de activación.
         </div>
         <div class="modal-footer">
           <button type="button" id="regButton" class="btn btn-primary">Registrarse</button>

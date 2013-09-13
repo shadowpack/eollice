@@ -26,9 +26,9 @@
           </form>
         </div>
         <div class="modal-body" id="forgot-success">
-          <div id="forgot-status0">Te hemos enviado un E-Mail con los datos para recuperar tu contraseña.</div>
-          <div id="forgot-status2">Existe un error al modificar la base de datos<br> Contacte con el staff de Eollice.</div>
-          <div id="forgot-status3">El servidor de correos no esta disponbile <br> Contacte con el staff de Eollice.</div>
+          <div id="forgot-status0">Te hemos enviado un e-mail con los datos para recuperar tu contraseña.</div>
+          <div id="forgot-status2">Existe un error al modificar la base de datos.<br> Contacte con el staff de Eollice.</div>
+          <div id="forgot-status3">El servidor de correos no esta disponbile. <br> Contacte con el staff de Eollice.</div>
         </div>
         <div class="modal-footer">
           <button type="button" id="forgotButton" class="btn btn-primary">Recuperar</button>

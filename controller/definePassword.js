@@ -45,7 +45,6 @@ $(document).ready(function() {
 					})
 				},
 				success: function(resultado){
-					alert(resultado);
 					$(".has-error").each(function(key,value){
 						$(this).removeClass('has-error');
 					});
