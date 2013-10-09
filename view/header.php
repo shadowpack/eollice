@@ -7,12 +7,11 @@
 	            <li><a class="eollice-text" href="#">Cómo funciona</a></li>
 	            <li><a class="eollice-text" href="#about">Proyectos</a></li>
 	            <li><a class="eollice-text" href="#contact">Quienes Somos</a></li>
-	            <li><a class="eollice-text" href="#contact">Contacto</a></li>
 	            <li><a class="eollice-text" href="#contact">Preguntas Frecuentes</a></li>
 	        </ul>
 			<form class="navbar-form navbar-right">
 				<button type="button" class="btn btn-primary RegFormBtn">Registrate</button>
-	            <button type="button" class="btn btn-primary">Ingresar</button>
+	            <button type="button" class="btn btn-primary loginInactiveBtn">Ingresar</button>
 			</form>
 		</div>
 	</div>

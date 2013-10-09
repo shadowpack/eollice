@@ -26,7 +26,27 @@ class db_core
 			}
 		}
 	}
-	function query($consulta)
+	private function use_db($db){
+		$sele = mysql_select_db($db, $this->con);
+	}
+	function db_query($consulta, $db = "*")
+	{
+		if($db == "*")
+		{
+			$db = $this->db;
+		}
+		$this->use_db($db);
+		$action = $this->query($consulta, $this->con);
+		if(!$action)
+		{
+			die("Imposible ejecutar consulta : ".$consulta."<br>".mysql_error($this->con)." en la linea ".mysql_errno($this->con));
+		}
+		else
+		{
+			return $action;
+		}
+	}
+	private function query($consulta)
 	{
 		$action = mysql_query($consulta, $this->con);
 		if(!$action)
@@ -38,9 +58,13 @@ class db_core
 			return $action;
 		}
 	}
-	function reg_one($consulta)
+	function reg_one($consulta, $db = "*")
 	{
-		$action = $this->query($consulta);
+		if($db == "*")
+		{
+			$db = $this->db;
+		}
+		$action = $this->db_query($consulta, $db);
 		if(!$action)
 		{
 			die("Imposible ejecutar consulta : ".$consulta);
@@ -52,9 +76,13 @@ class db_core
 		}
 	}
 	
-	function num_one($consulta)
+	function num_one($consulta, $db = "*")
 	{
-		$action = $this->query($consulta);
+		if($db == "*")
+		{
+			$db = $this->db;
+		}
+		$action = $this->db_query($consulta,$db);
 		if(!$action)
 		{
 			die("Imposible ejecutar consulta : ".$consulta);
@@ -65,7 +93,11 @@ class db_core
 			return $result;
 		}
 	}
-	function insert($table,$value){
+	function insert($table,$value, $db = "*"){
+		if($db == "*")
+		{
+			$db = $this->db;
+		}
 		$cadena = "INSERT INTO ".mysql_real_escape_string($table)." (";
 		foreach($value as $key => $vector){
 			$cadena .= "`".mysql_real_escape_string($key)."`,";
@@ -77,7 +109,7 @@ class db_core
 		}
 		$cadena = substr($cadena, 0, -1);
 		$cadena .= ");";
-		if($this->query($cadena))
+		if($this->db_query($cadena,$db))
 		{
 			return true;
 		}
@@ -86,7 +118,11 @@ class db_core
 			return false;
 		}
 	}
-	function update($table,$value, $where){
+	function update($table,$value, $where, $db = "*"){
+		if($db == "*")
+		{
+			$db = $this->db;
+		}
 		$cadena = "UPDATE ".mysql_real_escape_string($table)." SET ";
 		foreach($value as $key => $vector){
 			$cadena .= "`".mysql_real_escape_string($key)."`='".mysql_real_escape_string($vector)."',";
@@ -97,7 +133,7 @@ class db_core
 			$cadena .= mysql_real_escape_string($table).".".mysql_real_escape_string($key)."='".mysql_real_escape_string($vector)."' AND ";
 		}
 		$cadena = substr($cadena, 0, -5);
-		if($this->query($cadena))
+		if($this->db_query($cadena,$db))
 		{
 			return true;
 		}
@@ -106,8 +142,43 @@ class db_core
 			return false;
 		}
 	}
-	function isExists($table,$campo,$value){
-		$consulta = $this->query("SELECT * FROM ".mysql_real_escape_string($table)." as t WHERE t.".mysql_real_escape_string($campo)."='".mysql_real_escape_string($value)."'");
+	function arithmetic_update($table,$value, $where, $db = "*"){
+		if($db == "*")
+		{
+			$db = $this->db;
+		}
+		$cadena = "UPDATE ".mysql_real_escape_string($table)." SET ";
+		foreach($value as $key => $vector){
+			if(intval(mysql_real_escape_string($vector)) < 0)
+			{
+				$cadena .= "`".mysql_real_escape_string($key)."`=(`".mysql_real_escape_string($key)."`-".abs(intval(mysql_real_escape_string($vector)))."),";
+			}
+			else
+			{
+				$cadena .= "`".mysql_real_escape_string($key)."`=(`".mysql_real_escape_string($key)."`+".abs(intval(mysql_real_escape_string($vector)))."),";
+			}
+		}
+		$cadena = substr($cadena, 0, -1);
+		$cadena .= " WHERE ";
+		foreach($where as $key => $vector){
+			$cadena .= mysql_real_escape_string($table).".".mysql_real_escape_string($key)."='".mysql_real_escape_string($vector)."' AND ";
+		}
+		$cadena = substr($cadena, 0, -5);
+		if($this->db_query($cadena,$db))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	function isExists($table, $campo, $value, $db = "*"){
+		if($db == "*")
+		{
+			$db = $this->db;
+		}
+		$consulta = $this->db_query("SELECT * FROM ".mysql_real_escape_string($table)." as t WHERE t.".mysql_real_escape_string($campo)."='".mysql_real_escape_string($value)."'", $db);
 		if(mysql_num_rows($consulta) > 0)
 		{
 			return true;
@@ -117,9 +188,18 @@ class db_core
 			return false;
 		}
 	}
-	function delete($table, $campo,$valor)
-	{
-		if($this->query("DELETE FROM ".mysql_real_escape_string($table)." WHERE ".mysql_real_escape_string($campo)."='".mysql_real_escape_string($valor)."'"))
+	function isExists_multi($table, $values, $db = "*"){
+		if($db == "*")
+		{
+			$db = $this->db;
+		}
+		$cadena = "SELECT * FROM ".mysql_real_escape_string($table)." as t WHERE ";
+		foreach ($values as $key => $valus) {
+			$cadena .= "t.".mysql_real_escape_string($key)."='".mysql_real_escape_string($valus)."' AND ";
+		}
+		$cadena = substr($cadena, 0, -5);
+		$consulta = $this->db_query($cadena, $db);
+		if(mysql_num_rows($consulta) > 0)
 		{
 			return true;
 		}
@@ -127,6 +207,24 @@ class db_core
 		{
 			return false;
 		}
+	}
+	function delete($table, $campo, $valor, $db = "*")
+	{
+		if($db == "*")
+		{
+			$db = $this->db;
+		}
+		if($this->db_query("DELETE FROM ".mysql_real_escape_string($table)." WHERE ".mysql_real_escape_string($campo)."='".mysql_real_escape_string($valor)."'", $db))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	function last_id(){
+		return mysql_insert_id($this->con);
 	}
 }
 ?>

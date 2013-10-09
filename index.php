@@ -29,54 +29,11 @@
 	<div class="container">
 	    <div class="row">
 	    	<div class="col-md-4 login">
-	    		<div class="title-logform">Ingresa a Eollice</div>
-	        	<div class="log-form">
-	        		<form  role="form">
-			  			<div class="form-group input-group-400">
-				  			<div class="input-group">
-							    <span class="input-group-addon">@</span>
-				 	 			<input type="text" class="form-control" placeholder="E-Mail" style="height:45px;">
-							</div>
-						</div>
-						<div class="form-group input-group-400">
-							<div class="input-group">
-							    <span class="input-group-addon">?</span>
-				 	 			<input type="password" class="form-control" placeholder="Contraseña" style="height:45px;">
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="input-group btn-login">
-							    <button type="button" class="btn btn-primary" style="height:50px; width:280px;">Ingresar a tu Cuenta</button>
-							</div>
-						</div>
-						<p class="text-primary "><a data-toggle="modal" href="#forgotPassword" style="color:#FFF;">¿Olvidaste tu contraseña?</a></p>
-			        	
-			  		</form>
-			  	</div>
+	    		<?php include_once('view/loginform.php'); ?>
 	        </div>
 	        <div class="col-md-1 logadd-div" style="padding:0px 0px 0px 0px;"><div class="logadd"></div></div>
 	        <div class="col-md-7 proyecto" style="padding:0px 0px 0px 0px;">
-	        	<div class="header-proyecto">Proyecto Solar de 20 kW para Metalmecánica, Copiapó</div>
-	        	<div class="foto-Proyecto"><img src="images/images-proyectos/1.png" width="390" height="305"></div>
-	        	<div class="info-Proyecto">
-	        		<div class="info-inver-proyecto" id="cantidad">
-	        			<div class="info-title-proyecto">Cantidad Invertida</div>
-	        			<div class="info-content-proyecto">$ 1.200.000</div>
-	        		</div>
-	        		<div class="info-inver-proyecto" id="cantidad">
-	        			<div class="info-title-proyecto">Tasa de Interes</div>
-	        			<div class="info-content-proyecto">12%</div>
-	        		</div>
-	        		<div class="info-inver-proyecto" id="cantidad">
-	        			<div class="info-title-proyecto">Inversionistas</div>
-	        			<div class="info-content-proyecto">11</div>
-	        		</div>
-	        		<div class="info-inver-proyecto" id="cantidad">
-						<div class="input-group">
-						    <button type="button" class="btn btn-success btn-proyecto" style="height:45px;">Más información del proyecto</button>
-						</div>
-					</div>
-	        	</div>
+	        	<?php include_once('view/proyecto_destacado.php'); ?>
 	        </div>    
         </div>
         <div class="row botones-reg">
@@ -129,5 +86,6 @@
   <?php require_once("view/activeForm.php"); ?>
   <?php require_once("view/definePassword.php"); ?>
   <?php require_once("view/uservoice.php"); ?>
+  <?php require_once("view/user_terms.php"); ?>
 </body>
 </html>

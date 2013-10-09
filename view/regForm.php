@@ -8,7 +8,7 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h4 class="modal-title">Registrate en Eollice</h4>
         </div>
-        <div class="modal-body" id="modal-reg">
+        <div class="modal-body" id="modal-reg" style="overflow:hidden;">
           <form role="form">
             <label class="messageinput text-danger"></label>
             <div class="form-group">
@@ -42,7 +42,7 @@
             <div class="checkbox">
               <label>
               <br>
-                <input type="checkbox" id="acepto" value="1"> Acepto las politicas de privacidad y uso.
+                <input type="checkbox" id="acepto" value="1"><div class="user_terms" style="cursor:pointer;">Acepto el Convenio de Políticas de Privacidad y Condiciones de Uso de Plataforma Web Eollice.</div>
               </label>
             </div>
           </form>

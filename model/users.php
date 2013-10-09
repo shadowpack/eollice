@@ -131,6 +131,45 @@ class generic extends webservice
 			$this->returnData(array("status"=>1));
 		}
 	}
+	function login($opt){
+		// PUEDEN EXISTIR 3 ESTADOS A LA OPERACION (status)
+		// 0: OPERACION EXITOSA
+		// 1: NO SE ENCUENTRA EL USUARIO O ES INCORRECTO
+		// 2: El usuario no existe
+		$dbo = $this->db;
+		$retorno['email'] = $opt->email;
+		$retorno['password'] = md5($opt->password);
+		if($dbo->isExists('users', 'email',$retorno['email']))
+		{
+			if($dbo->isExists_multi('users', $retorno))
+			{
+				$_SESSION['token'] = $this->getToken('session_log','token');
+				$aux['token'] = $_SESSION['token'];
+				$aux['id_user'] = $dbo->reg_one("SELECT id_user FROM users WHERE email='".$opt->email."'");
+				$aux['id_user'] = $aux['id_user'][0]; 
+				$aux['date'] = date('', time());
+				$aux['ip'] = $this->getIP();
+				$dbo->insert('session_log', $aux);
+				$this->returnData(array("status"=>0));
+			}
+			else
+			{
+				$this->returnData(array("status"=>1));
+			}
+		}
+		else
+		{
+			$this->returnData(array("status"=>2));
+		}
+	}
+	//METODO PARA DETERMINAR IP
+	function getIP(){
+	    if( isset( $_SERVER['HTTP_X_FORWARDED_FOR'] )) $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+	    else if( isset( $_SERVER ['HTTP_VIA'] ))  $ip = $_SERVER['HTTP_VIA'];
+	    else if( isset( $_SERVER ['REMOTE_ADDR'] ))  $ip = $_SERVER['REMOTE_ADDR'];
+	    else $ip = null ;
+	    return $ip;
+	}
 }
 include("handler.php");
 ?>

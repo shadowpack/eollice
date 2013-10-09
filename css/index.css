@@ -59,6 +59,8 @@
 	font-weight: bold;
 	font-size: 20px;
 	padding-left: 15px;
+	border-bottom: 1px #FFF solid;
+	width: 400px;
 }
 .no-padding{
 	padding:0px 0px 0px 0px;
