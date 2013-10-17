@@ -2,7 +2,7 @@
 <div class="title-logform">Ingresa a Eollice</div>
 <div class="log-form">
 	<form  role="form">
-		<div class="message-logform">Verifica tu usuario y contraseña</div>
+		<div class="message-logform">Digita tu usuario y contraseña</div>
 			<div class="form-group input-group-400">
   			<div class="input-group">
 			    <span class="input-group-addon">@</span>
