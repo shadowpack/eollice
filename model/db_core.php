@@ -93,6 +93,29 @@ class db_core
 			return $result;
 		}
 	}
+	function select($table,$value, $where = "/", $db = "*"){
+		if($db == "*")
+		{
+			$db = $this->db;
+		}
+		$cadena = "SELECT  ".$value." FROM ".mysql_real_escape_string($table)." ";
+		if($where != "/"){
+			$cadena .= " WHERE ";
+			foreach($where as $key => $vector){
+				$cadena .= mysql_real_escape_string($table).".".mysql_real_escape_string($key)."='".mysql_real_escape_string($vector)."' AND ";
+			}
+			$cadena = substr($cadena, 0, -5);
+		}
+		$retorno = $this->db_query($cadena,$db);
+		if($retorno)
+		{
+			return $retorno;
+		}
+		else
+		{
+			return false;
+		}
+	}
 	function insert($table,$value, $db = "*"){
 		if($db == "*")
 		{

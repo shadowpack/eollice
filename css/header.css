@@ -4,4 +4,18 @@
 }
 .navbar-inverse .navbar-nav .eollice-text{
 	color: #FFF;
+	border-top-color: #FFF;
+	border-bottom-color: #FFF;
+}
+.eollice-text{
+	color: #FFF;
+	border-top-color: #FFF;
+	border-bottom-color: #FFF;
+}
+.navbar-inverse .navbar-nav>.dropdown>a .caret{
+	border-top-color: #FFF;
+	border-bottom-color: #FFF;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
+	background: #3276b1;
 }

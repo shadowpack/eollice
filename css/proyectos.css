@@ -1,0 +1,106 @@
+.proyectos{
+	padding: 40px 0px 40px 0px;
+}
+.proyectos_container{
+	min-height: 800px;
+	background: #38A3EC;
+	border-radius: 5px;
+	padding-bottom: 30px;
+}
+.proyectos_header{
+	height: 60px;
+	background: #3276b1;
+	padding: 15px 20px 15px 40px;
+	font-size: 22px;
+	color: #FFF;
+	border-radius: 5px;
+	font-family: "Helvetica";
+}
+.proyectos_body{
+	padding: 0px 20px 0px 20px;
+}
+.proyectos_item{
+	margin-top: 20px;
+	height: 200px;
+	width: 100%;
+	background: #FFF;
+	border-radius: 5px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.proyectos_photo{
+	float: left;
+	margin: 10px;
+	border:2px #CCC solid;
+	border-radius: 5px;
+	height: 180px;
+	padding: 5px;
+	width: 250px;
+}
+.proyecto_info{
+	float: left;
+	width: 650px;
+	height: 200px;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+.proyecto_title{
+	float: left;
+	font-size: 20px;
+	font-family: "Helvetica";
+	color: #000039;
+	height:50px;
+	width: 650px;
+}
+.proyecto_tasa{
+	float: left;
+	font-size: 16px;
+	font-family: "Helvetica";
+	color: #000039;
+	height:30px;
+	width: 300px;
+}
+.proyecto_plazo{
+	float: left;
+	font-size: 16px;
+	font-family: "Helvetica";
+	color: #000039;
+	height:30px;
+	width: 300px;
+}
+.proyecto_monto{
+	float: left;
+	font-size: 16px;
+	font-family: "Helvetica";
+	color: #000039;
+	height:30px;
+	width: 300px;
+}
+.proyecto_inversionistas{
+	float: left;
+	font-size: 16px;
+	font-family: "Helvetica";
+	color: #000039;
+	height:30px;
+	width: 300px;
+}
+.proyecto_bar{
+	float: left;
+	font-size: 14px;
+	font-family: "Helvetica";
+	color: #000039;
+	height:30px;
+	width: 600px;
+	margin-top: 10px;
+}
+.proyecto_invetir{
+	float: left;
+	width: 200px;
+	height: 200px;
+	padding: 126px 5px 10px 5px;
+
+}
+.btn-invertir{
+	width: 180px;
+}

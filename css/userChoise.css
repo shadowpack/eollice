@@ -1,0 +1,23 @@
+.userChoise{
+	float: left;
+	width: 97%;
+	height: 365px;
+}
+.inversionclass{
+	height: 365px;
+}
+.descripcionUser{
+	float: left;
+	height: 120px;
+	width: 100%;
+	background: #38A3EC;
+	padding: 25px;
+	color: #FFF;
+	font-family: "Helvetica";
+	font-weight: bold;
+	font-size: 23px;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+}
+.descripcionRow{
+	padding: 0px 29px 0px 15px;
+}

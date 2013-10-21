@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  require_once('model/db_core.php');
+?>
 <!-- DECLARAMOS QUE CONSISTE EN UN DOCUMENTO HTML5 -->
 <!DOCTYPE html>
 <html>
@@ -26,30 +30,25 @@
 	<!-- ELEMENTOS DE BODY -->
 	<div class="jumbotron jumboClass">
 	</div>
-	<div class="container">
-	    <div class="row">
-	    	<div class="col-md-4 login">
-	    		<?php include_once('view/loginform.php'); ?>
-	        </div>
-	        <div class="col-md-1 logadd-div" style="padding:0px 0px 0px 0px;"><div class="logadd"></div></div>
-	        <div class="col-md-7 proyecto" style="padding:0px 0px 0px 0px;">
-	        	<?php include_once('view/proyecto_destacado.php'); ?>
-	        </div>    
-        </div>
-        <div class="row botones-reg">
-        	<div class="col-md-5">
-        		<div class="input-group boton-reg-eollice">
-				    <button type="button" class="btn btn-primary boton-eollice RegFormBtn"><text style="font-size:30px;">Registrate Ahora</text><br>Se parte de la comunidad Eollice</button>
-				</div>
-        	</div>
-        	<div class="col-md-7">
-        		<div class="input-group boton-reg-eollice">
-				    <button type="button" class="btn btn-primary boton-eollice"><text style="font-size:27px;">Conoce los proyectos de inversión</text></button>
-				</div>
-        	</div>
-        </div>
-        <div class="row">
-      		<div class="col-md-12 esp40"></div>
+	<div class="container">	    	
+  		<?php 
+      if(isset($_SESSION['token'])){
+        $db = new db_core();
+        if($db->isExists('session_log', 'token', $_SESSION['token'])){
+          include_once('view/userChoise.php'); 
+        }
+        else
+        {
+          include_once('view/loginform.php'); 
+        }
+      }
+      else
+      {
+        include_once('view/loginform.php'); 
+      }
+      ?>
+      <div class="row">
+    		<div class="col-md-12 esp40"></div>
     	</div>
     	<div class="row">
       		<div class="col-md-4 no-padding">
