@@ -1,0 +1,223 @@
+.simulation-box{
+	width: 800px;
+	
+}
+.simulation-detail{
+	height: 780px;
+}
+.simulation-body{
+	height: 500px;
+}
+.simulation_monto{
+	height: 30px;
+	width: 800px;
+}
+.input_title{
+	float: left;
+	width: 150px;
+	padding: 5px;
+	font-size: 14px;
+	color: #666;
+}
+.input_monto{
+	float: left;
+	height: 50px;
+	border:1px #666 solid;
+	width: 500px;
+	padding: 5px;
+}
+.input_monto_number{
+	float: left;
+	width: 455px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: 40px;
+	font-size: 22px;
+	padding-left: 10px;
+	color: #555;
+}
+.input_monto_btn{
+	float: left;
+	height: 45px;
+	width: 30px;
+}
+.input_monto_plus{
+	float: left;
+	border-radius: 5px;
+	background: #3276b1;
+	text-align: center;
+	line-height: 17px;
+	vertical-align: 17px;
+	font-size: 16px;
+	color:#FFF;
+	font-weight: bold;
+	height: 17px;
+	width: 30px;
+	margin-bottom: 3px;
+	cursor: pointer;
+}
+.input_monto_less{
+	float: left;
+	border-radius: 5px;
+	background: #3276b1;
+	text-align: center;
+	line-height: 17px;
+	vertical-align: 17px;
+	font-size: 16px;
+	color:#FFF;
+	font-weight: bold;
+	height: 17px;
+	width: 30px;
+	margin-top: 2px;
+	cursor: pointer;
+}
+.especificacion_monto{
+	float: right;
+	height: 30px;
+	width: 800px;
+	padding-top: 5px;
+	padding-left: 370px;
+}
+.simulation_tasa{
+	float: left;
+	height: 50px;
+	padding-top: 10px;
+	width: 800px;
+	font-size: 18px;
+}
+.simulation_tir{
+	float: left;
+	height: 50px;
+	padding-top: 10px;
+	width: 800px;
+	font-size: 18px;
+}
+.infos_title{
+	float: left;
+	width: 150px;
+	font-size: 18px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	color: #777;
+}
+.infos_content{
+	float: left;
+	width: 200px;
+	font-size: 32px;
+	color: #555;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	font-weight: bold;
+}
+.simulation_costo_uso{
+	margin-top: 20px;
+	float: left;
+	height: 180px;
+	padding-top: 10px;
+	width: 740px;
+	font-size: 18px;
+	border: 1px #555 solid;
+	border-radius: 5px;
+	padding:15px;
+}
+.simulation_costo_uso_title{
+	float: left;
+	width: 370px;
+	height: 100px;
+	font-size: 20px;
+	font-weight: bold;
+	color:#666;
+}
+.simulation_costo_title{
+	float: left;
+	width: 370px;
+	height: 30px;
+	font-size:20px;
+	color:#666;
+}
+.simulation_costo_content{
+	float: left;
+	width: 370px;
+	height: 100px;
+	font-size:40px;
+	color:#666;
+}
+.simulation_costo_uso_btn{
+	float: left;
+	width: 330px;
+	height: 100px;
+	padding-top: 20px;
+}
+.simulation_btn_invertir{
+	height: 60px;
+	width: 300px;
+	font-size: 24px;
+}
+.simulation_costo_uso_bajada{
+	float: left;
+	width: 710px;
+	height: 80px;
+	color: #3276b1;
+	font-size: 16px;
+	font-weight: bold;
+}
+.costos_inversion{
+	float: left;
+	height: 150px;
+	width: 740px;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+.costos_inversion_title{
+	padding-left: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #666;
+	height: 40px;
+}
+.costos_inversion_table{
+	border: 1px #666 solid;
+	border-bottom: none;
+}
+.retorno_inversion{
+	float: left;
+	height: 150px;
+	width: 740px;
+}
+.inversion_item_1{
+	height: 40px;
+	background: #F2F2F2;
+	color: #666;
+	font-size: 16px;
+	width: 738px;
+	padding: 5px 10px 5px 10px;
+	border-bottom: 1px #666 solid;
+}
+.inversion_item_2{
+	height: 40px;
+	background: #FFF;
+	color: #666;
+	width: 738px;
+	font-size: 16px;
+	padding: 5px 10px 5px 10px;
+	border-bottom: 1px #666 solid;
+}
+.inversion_item_title{
+	float: left;
+	width: 530px;
+}
+.inversion_item_content{
+	float: left;
+	width: 160px;
+}
+.inversion_item_tooltip{
+	float: left;
+	width: 20px;
+	color:#376092;
+	font-size: 16px;
+}
+.hidden{
+	display: none;
+}
