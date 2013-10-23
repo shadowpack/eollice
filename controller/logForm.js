@@ -19,7 +19,6 @@ $(document).ready(function() {
 					vars: JSON.stringify(datas)
 				},
 				success: function(resultado){
-					alert(resultado);
 					var result = JSON.parse(resultado);
 					if(result.status == 0){
 						location.href="index.php";
@@ -47,5 +46,8 @@ $(document).ready(function() {
 			$(this).button('reset');
 		}
 		
+	});
+	$("#btn_proyectos_landing").click(function(){
+		location.href="proyectos.php";
 	});
 });

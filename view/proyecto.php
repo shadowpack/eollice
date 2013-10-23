@@ -39,7 +39,7 @@
     						<div class="proyect_data_indicador">
     							<div class="proyect_data_indicador_value"><?php echo $datos['proyecto']['plazo']; ?></div>
     							<div class="proyect_data_tooltip glyphicon glyphicon-question-sign"></div>
-    							<div class="proyect_data_indicador_title">Meses de Plazo</div>
+    							<div class="proyect_data_indicador_title" id="plazo_meses">Meses de Plazo</div>
     						</div>
     						<div class="proyect_data_indicador" style="border-right:0px;">
     							<div class="proyect_data_indicador_value"><?php echo number_format($datos['proyecto']['monto_total'],0,",","."); ?></div>

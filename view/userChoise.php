@@ -20,7 +20,7 @@
 		<div class="row botones-reg">
 			<div class="col-md-12">
 				<div class="input-group boton-reg-eollice">
-			      <button type="button" class="btn btn-primary boton-eollice"><text style="font-size:27px;">Conoce los proyectos de inversión</text></button>
+			      <button type="button" class="btn btn-primary boton-eollice" id="btn_proyectos_landing"><text style="font-size:27px;">Conoce los proyectos de inversión</text></button>
 			    </div>
 			</div>
 		</div>

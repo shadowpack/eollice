@@ -1,8 +1,9 @@
 .proyectos{
 	padding: 40px 0px 40px 0px;
+	min-height: 880px;
 }
 .proyectos_container{
-	min-height: 800px;
+	min-height: 400px;
 	background: #38A3EC;
 	border-radius: 5px;
 	padding-bottom: 30px;

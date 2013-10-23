@@ -26,7 +26,7 @@
               <div class="especificacion_monto">*El monto debe ser en multiplos de $50.000</div>
             </div>
             <div class="simulation_tasa">
-              <div class="infos_title">Tasa de Interes: </div>
+              <div class="infos_title" id="tasa_value">Tasa de Interes: </div>
               <div class="infos_content"><?php echo $simu['proyecto']['tasa_interes_anual']; ?> %</div>
             </div>
             <div class="simulation_tir">

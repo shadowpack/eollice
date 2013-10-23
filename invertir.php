@@ -28,7 +28,7 @@
   <!-- INCLUIMOS EL HEADER -->
   <?php require_once("view/header.php"); ?>
   <!-- ELEMENTOS DE BODY -->
-  <?php require_once("view/proyecto.php"); ?>
+  <?php require_once("view/invertir.php"); ?>
   <!-- INCLUIMOS EL FOOTER -->
   <?php require_once("view/footer.php"); ?>
   <!-- INCLUIMOS LAS CAPAS MODALES -->
@@ -38,7 +38,8 @@
   <?php require_once("view/definePassword.php"); ?>
   <?php require_once("view/uservoice.php"); ?>
   <?php require_once("view/user_terms.php"); ?>
+  <?php require_once("view/add_banco.php"); ?>
   <?php require_once("view/simulation.php"); ?>
-  <?php require_once("view/contrato.php"); ?>
+  <?php require_once("view/confirm-modal.php"); ?>
 </body>
 </html>

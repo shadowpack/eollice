@@ -15,6 +15,17 @@ $(document).ready(function() {
 		$('.input_monto_number').html("$ "+number_format(monto_acumulador,0,",","."));
 		simular();
 	});
+	$('#simulation_btn_invertir').click(function(){
+		$("#contrato-modal").modal('toggle');
+	});
+	
+	function getUrlVars() {
+		var vars = {};
+		var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+			vars[key] = value;
+		});
+		return vars;
+	}
 	function simular(){
 		var cuota_proy;
 		$.ajax({
@@ -71,13 +82,6 @@ $(document).ready(function() {
 	    	s[1] += new Array(prec - s[1].length + 1).join('0');
 		}
 		return s.join(dec);
-	}
-	function getUrlVars() {
-		var vars = {};
-		var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-			vars[key] = value;
-		});
-		return vars;
 	}
 	simular();
 });

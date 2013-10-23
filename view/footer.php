@@ -1,4 +1,4 @@
-p<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/footer.css">
 <div class="navbar navbar-inverse navbar-bottom eollice-footer no-padding">
 	<div class="container">	
 		<a class="navbar-brand" href="#"><img src="images/logo-blanco.png" height="20" /></a>

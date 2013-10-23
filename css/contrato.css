@@ -1,0 +1,8 @@
+.contrato-box{
+	width: 1100px;
+}
+.contrato-detail{
+	overflow: scroll;
+	height: 800px;
+	overflow-x:hidden;
+}

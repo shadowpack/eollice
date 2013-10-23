@@ -11,7 +11,7 @@ class webservice{
 		}
 		echo json_encode((object)$auxiliar);
 	}
-	function getToken($table,$campo,$uc=TRUE,$n=TRUE,$sc=TRUE)
+	function getToken($table,$campo,$uc=TRUE,$n=TRUE,$sc=TRUE,$largo=15)
 	{
 		$db = new db_core();
 	    $source = 'abcdefghijklmnopqrstuvwxyz';
@@ -23,7 +23,7 @@ class webservice{
     	{
 	        $rstr = "";
 	        $source = str_split($source,1);
-	        for($i=1; $i<=15; $i++){
+	        for($i=1; $i<=$largo; $i++){
 	            mt_srand((double)microtime() * 1000000);
 	            $num = mt_rand(1,count($source));
 	            $rstr .= $source[$num-1];
@@ -34,6 +34,11 @@ class webservice{
 	        }
     	}
 	    return $rstr;
+	}
+	function get_user($token){
+		$db = new db_core();
+		$user_id = $db->reg_one("SELECT id_user FROM session_log AS s WHERE s.token='".$token."'");
+		return $user_id[0];
 	}
 }
 ?>

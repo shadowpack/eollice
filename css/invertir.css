@@ -1,0 +1,344 @@
+.invertir{
+	min-height: 870px;
+	padding: 30px 0px 30px 0px;
+}
+.invertir-container{
+	min-height: 430px;
+	background-color: #38A3EC;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.invertir-header{
+	background-color: #3276b1;
+	height: 60px;
+	padding: 15px 30px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.invertir-header-title{
+	float: left;
+	height: 30px;
+	width: 900px;
+	font-size: 22px;
+	color: #FFF;
+}
+.invertir-header-btn{
+	float: left;
+	height: 30px;
+	width: 180px;
+	background: #FFF;
+	color: #3276b1;
+	border-radius: 5px;
+	line-height: 30px;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+}
+.invertir-body{
+	float: left;
+	width: 1170px;
+	height: 390px;
+	padding: 30px;
+	padding-bottom: 20px;
+}
+.invertir-body-leftlayer{
+	float: left;
+	width: 530px;
+	height: 300px;
+	background: #FFF;
+	border-radius: 5px;
+	padding: 15px 20px;
+}
+.invertir-body-leftlayer-title{
+	float: left;
+	height: 50px;
+	width: 500px;
+	font-size: 22px;
+	color: #376092;
+	border-bottom: 1px #3276b1 solid;
+
+}
+.invertir-body-leftlayer-data{
+	float: left;
+	width: 150px;
+	height: 160px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #666;
+	line-height: 40px;
+	vertical-align: middle;
+}
+.invertir-body-leftlayer-btn{
+	float: left;
+	width: 130px;
+	height: 160px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #666;
+	line-height: 40px;
+	padding-left: 20px;
+	vertical-align: middle;
+}
+.invertir-body-leftlayer-datatitle{
+	float: left;
+	width: 200px;
+	height: 160px;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #376092;
+}
+.invertir-body-rightlayer{
+	float: left;
+	margin-left: 40px;
+	width: 530px;
+	height: 300px;
+	background: #FFF;
+	border-radius: 5px;
+	padding: 15px;
+}
+.invertir-body-rightlayer-title{
+	float: left;
+	height: 40px;
+	width: 500px;
+	font-size: 22px;
+	color: #376092;
+	border-bottom: 1px #CCC solid;
+	margin-bottom: 20px;
+}
+.invertir-body-rightlayer-photo{
+	float: left;
+	height: 200px;
+	width: 240px;
+	padding: 5px;
+	border:2px #999 solid;
+	color: #376092;
+}
+.invertir-body-rightlayer-data{
+	float: left;
+	width: 100px;
+	height: 160px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #666;
+	line-height: 40px;
+	vertical-align: middle;
+}
+.invertir-body-rightlayer-datatitle{
+	float: left;
+	width: 140px;
+	margin-left: 20px;
+	height: 160px;
+	line-height: 40px;
+	vertical-align: middle;
+	font-size: 16px;
+	font-weight: bold;
+	color: #376092;
+}
+.cuentas-container{
+	float: left;
+	min-height: 200px;
+	width: 1170px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.cuentas-body{
+	float: left;
+	min-height: 80px;
+	width: 100%;
+	background-color: #38A3EC;
+	padding: 15px 30px;
+}
+.cuentas-header{
+	float: left;
+	background-color: #3276b1;
+	height: 60px;
+	padding: 15px 30px;
+	width: 100%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.cuentas-header-title{
+	float: left;
+	height: 30px;
+	width: 900px;
+	font-size: 22px;
+	color: #FFF;
+}
+.cuenta-btn{
+	float: left;
+	height: 40px;
+	width: 200px;
+}
+.cuenta_bank{
+	height: 80px;
+}
+.cuentas-checkbox{
+	float: left;
+	width: 50px;
+}
+.cuentas-Titulos{
+	float: left;
+	width: 750px;
+	height: 80px;
+}
+.cuentas-tipoCuenta{
+	float: left;
+	width: 300px;
+	padding-left: 10px;
+	height: 40px;
+	color:#FFF;
+	font-weight: bold;
+	font-size: 20px;
+}
+.cuentas-nInversiones{
+	float: left;
+	width: 400px;
+	padding-left: 10px;
+	height: 40px;
+	color:#FFF;
+	font-size: 18px;
+}
+.cuentas-descripcion{
+	float: left;
+	width: 700px;
+	padding-left: 10px;
+	height: 40px;
+	color:#FFF;
+	font-size: 16px;
+}
+.cuentas-button{
+	float: left;
+	width: 200px;
+	height: 60px;
+	padding:10px 30px;
+	padding-top: 20px;
+}
+.cuentas_mod_button{
+	float: left;
+	height: 40px;
+	width: 300px;
+	text-align: center;
+	color: #444;
+	line-height: 40px;
+	vertical-align: middle;
+	font-size: 18px;
+	background: #CCC;
+	border-radius: 5px;
+}
+.blank_button{
+	background: #FFF;
+	color: #3276b1;
+}
+.pago-container{
+	float: left;
+	min-height: 430px;
+	width: 1170px;
+	background-color: #FFF;
+	border-top-left-radius: 5px;
+	margin-top: 20px;
+	border-top-right-radius: 5px;
+}
+.pago-container-header{
+	background-color: #3276b1;
+	height: 60px;
+	padding: 15px 30px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.pago-header-title{
+	float: left;
+	height: 30px;
+	width: 900px;
+	font-size: 22px;
+	color: #FFF;
+}
+.pago-container-body{
+	float: left;
+	width: 1170px;
+	min-height: 390px;
+	padding: 30px;
+	padding-bottom: 20px;
+}
+.pago-message{
+	float: left;
+	font-size: 18px;
+	color:#376092;
+	height: 40px;
+	width: 1100px;
+	margin-bottom: 10px;
+}
+.pago-transferencia{
+	float: left;
+	font-size: 18px;
+	width: 1100px;
+	color:#666;
+	height: 40px;
+	margin-bottom: 10px;
+}
+.pago-cuenta{
+	float: left;
+	width: 1100px;
+	font-size: 16px;
+	color:#666;
+	height: 180px;
+	border-bottom: 1px #38A3EC solid;
+}
+.pago-coi{
+	float: left;
+	width: 150px;
+	text-align: center;
+	line-height: 40px;
+	vertical-align: middle;
+	background: #DDD;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 5px;
+	margin-top: -6px;
+}
+.textfloat{
+	float: left;
+}
+.pago-envio{
+	float: left;
+	width: 1100px;
+	font-size: 16px;
+	color:#376092;
+	height: 60px;
+	margin-top: 30px;
+	border-bottom: 1px #38A3EC solid;
+}
+.pago-codigo{
+	float: left;
+	width: 150px;
+	text-align: center;
+	line-height: 40px;
+	vertical-align: middle;
+	background: #DDD;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 5px;
+	margin-top: -8px;
+	color: #666;
+}
+.pago-instrucciones{
+	float: left;
+	width: 1100px;
+	height: 60px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	color:#376092;
+}
+.pago-accion-confirmar{
+	float: left;
+	width: 1100px;
+	height: 80px;
+	padding-left: 550px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	color:#376092;
+}
