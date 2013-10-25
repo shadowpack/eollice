@@ -107,6 +107,10 @@ class generic extends webservice
 			header('Location: ../index.php?active=0');
 		}
 	}
+	function logout($opt){
+		unset($_SESSION['token']);
+		$this->returnData(array("status"=>1));
+	}
 	function reDefinePassword($opt){
 		// PUEDEN EXISTIR 3 ESTADOS A LA OPERACION (status)
 		// 0: OPERACION EXITOSA
@@ -144,14 +148,22 @@ class generic extends webservice
 		{
 			if($dbo->isExists_multi('users', $retorno))
 			{
-				$_SESSION['token'] = $this->getToken('session_log','token');
-				$aux['token'] = $_SESSION['token'];
-				$aux['id_user'] = $dbo->reg_one("SELECT id_user FROM users WHERE email='".$opt->email."'");
-				$aux['id_user'] = $aux['id_user'][0]; 
-				$aux['date'] = date('', time());
-				$aux['ip'] = $this->getIP();
-				$dbo->insert('session_log', $aux);
-				$this->returnData(array("status"=>0));
+				$retorno['active'] = 1;
+				if($dbo->isExists_multi('users', $retorno))
+				{
+					$_SESSION['token'] = $this->getToken('session_log','token');
+					$aux['token'] = $_SESSION['token'];
+					$aux['id_user'] = $dbo->reg_one("SELECT id_user FROM users WHERE email='".$opt->email."'");
+					$aux['id_user'] = $aux['id_user'][0]; 
+					$aux['date'] = date('', time());
+					$aux['ip'] = $this->getIP();
+					$dbo->insert('session_log', $aux);
+					$this->returnData(array("status"=>0));
+				}
+				else
+				{
+					$this->returnData(array("status"=>3));
+				}
 			}
 			else
 			{

@@ -1,9 +1,12 @@
 .jumboClass{
+	float: left;
 	background-image:url(../images/Home1.png);
 	background-position: center;
 	background-color: #CDF0F2;
 	background-repeat: no-repeat;
 	height: 400px;
+	width: 1170px;
+	margin-bottom: 20px;
 }
 .footer{
 	background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
@@ -17,6 +20,7 @@
 	border-radius: 5px;
 	border-top-right-radius: 0px;
 	border-bottom-right-radius: 0px;
+
 }
 .proyecto{
 	height: 365px;

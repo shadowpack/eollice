@@ -137,7 +137,7 @@
 }
 .cuentas-container{
 	float: left;
-	min-height: 200px;
+	min-height: 140px;
 	width: 1170px;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -238,6 +238,7 @@
 	border-top-left-radius: 5px;
 	margin-top: 20px;
 	border-top-right-radius: 5px;
+	display: none;
 }
 .pago-container-header{
 	background-color: #3276b1;

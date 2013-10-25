@@ -16,7 +16,20 @@ $(document).ready(function() {
 		simular();
 	});
 	$('#simulation_btn_invertir').click(function(){
-		$("#contrato-modal").modal('toggle');
+		$.ajax({
+			url: "model/connection_live.php",
+			type: "POST",
+			success: function(resultado){
+				if(resultado == "true"){
+					$("#contrato-modal").modal('toggle');
+				}
+				else
+				{
+					$("#simulation-modal").modal('hide');
+					$("#logForm").modal('toggle');
+				}
+			}
+		});
 	});
 	
 	function getUrlVars() {

@@ -6,7 +6,7 @@
 			$db =  new db_core();
 			$consulta[0] = $db->select("resumen","*");
 			while($consulta[1] = mysql_fetch_array($consulta[0])){
-				$inversion[0] = $db->reg_one("SELECT SUM(monto_inversion), COUNT(*) FROM inversion_proyecto AS p WHERE p.id_proyecto='".$consulta[1]['id_proyecto']."'");
+				$inversion[0] = $db->reg_one("SELECT SUM(monto_inversion), COUNT(*) FROM inversion_proyecto AS p WHERE p.id_proyecto='".$consulta[1]['id_proyecto']."' AND p.preconfirmado=1");
 				$porcentaje = number_format(((($inversion[0][0])/$consulta[1]['monto_total'])*100),0);
 				echo '<div class="row proyectos_item">
 	    			<div class="proyectos_photo">
@@ -43,7 +43,20 @@
 			$retorno['proyecto'] = $db->reg_one("SELECT * FROM proyecto INNER JOIN resumen ON proyecto.id_proyecto = resumen.id_proyecto INNER JOIN imagenes_proyectos ON imagenes_proyectos.id_proyecto = proyecto.id_proyecto WHERE proyecto.id_proyecto='".$id."'");
 			$retorno['ejecutor'] = $db->reg_one("SELECT * FROM compania_ejecutor AS c WHERE c.id_compania=(SELECT id_compania FROM proyecto as p WHERE p.id_proyecto='".$id."')");
 			$retorno['usuario'] = $db->reg_one("SELECT * FROM datos_usuario AS c WHERE c.id_usuario=(SELECT id_usuario FROM proyecto as p WHERE p.id_proyecto='".$id."')");
-			$retorno['inversion'] = $db->reg_one("SELECT SUM(monto_inversion), COUNT(*) FROM inversion_proyecto AS p WHERE p.id_proyecto='".$id."' AND p.confirmado='1'");
+			$retorno['inversion'] = $db->reg_one("SELECT SUM(monto_inversion), COUNT(*) FROM inversion_proyecto AS p WHERE p.id_proyecto='".$id."' AND p.preconfirmado='1'");
+			$retorno['inversion']['porcentaje'] = number_format((($retorno['inversion'][0]/$retorno['proyecto']['monto_total'])*100),0);
+			foreach ($retorno as $key => $value) {
+				foreach ($value as $key2 => $value2) {
+					$retorno[$key][$key2] = utf8_encode($value2);
+				}
+			}
+			return $retorno;
+		}
+		static public function get_last_proyect(){
+			//HACEMOS LA CADENA SEGURA
+			$db =  new db_core();
+			$retorno['proyecto'] = $db->reg_one("SELECT * FROM proyecto INNER JOIN resumen ON proyecto.id_proyecto = resumen.id_proyecto INNER JOIN imagenes_proyectos ON imagenes_proyectos.id_proyecto = proyecto.id_proyecto ORDER BY proyecto.id_proyecto DESC");
+			$retorno['inversion'] = $db->reg_one("SELECT SUM(monto_inversion), COUNT(*) FROM inversion_proyecto AS p WHERE p.id_proyecto='".$retorno['proyecto']['id_proyecto']."' AND p.preconfirmado='1' ");
 			$retorno['inversion']['porcentaje'] = number_format((($retorno['inversion'][1]/$retorno['proyecto']['monto_total'])*100),0);
 			foreach ($retorno as $key => $value) {
 				foreach ($value as $key2 => $value2) {

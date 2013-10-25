@@ -18,7 +18,7 @@
 			$retorno['status'] = true;
 			$retorno['ncuenta'] = $opt->ncuenta;
 			$retorno['banco'] = utf8_encode($valores['banco']);
-			$retorno['tipo'] = ($opt->ncuenta == 0)?"Cuenta Corriente":"Cuenta Vista";
+			$retorno['tipo'] = ($opt->tipo_cuenta == 0)?"Cuenta Corriente":"Cuenta Vista";
 			$retorno['id'] = $dbo->last_id();
 			$this->returnData($retorno);
 		}
@@ -30,7 +30,7 @@
 		public function mod_bank($opt){
 			$dbo = $this->db;
 			$valores['banco'] = $this->get_banco($opt->id_banco);
-			$valores['tipo_de_cuenta'] = $this->get_banco($opt->tipo_cuenta);
+			$valores['tipo_de_cuenta'] = $opt->tipo_cuenta;
 			$valores['numero_cuenta_banco'] = $opt->ncuenta;
 			$where['id_cuenta'] = $opt->idcuenta;
 			$dbo->update('cuentas_bancarias',$valores, $where);

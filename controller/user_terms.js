@@ -29,4 +29,9 @@ $(document).ready(function(){
 	 	$("#reject_terms_btn").html("Cerrar");
 	 	$("#user_terms").scrollTop(0);
 	 });
+	 $("#acepto").click(function(){
+		$("#user_terms").modal('toggle');
+		$("#reject_terms_btn").html("Rechazar");
+		$("#user_terms").scrollTop(0);
+	}); 
 });

@@ -33,12 +33,12 @@
     					<div class="proyect_data_indicadores">
     						<div class="proyect_data_indicador">
     							<div class="proyect_data_indicador_value"><?php echo $datos['proyecto']['tasa_interes_anual']; ?>%</div>
-    							<div class="proyect_data_tooltip glyphicon glyphicon-question-sign"></div>
+    							<div class="proyect_data_tooltip glyphicon glyphicon-question-sign tooltip_data_info" data-toggle="tooltip" data-placement="bottom" title="Es la tasa que se le cobrará al usuario del proyecto en el préstamo que accede a través de Eollice"></div>
     							<div class="proyect_data_indicador_title">Tasa de Interes</div>
     						</div>
     						<div class="proyect_data_indicador">
     							<div class="proyect_data_indicador_value"><?php echo $datos['proyecto']['plazo']; ?></div>
-    							<div class="proyect_data_tooltip glyphicon glyphicon-question-sign"></div>
+    							<div class="proyect_data_tooltip glyphicon glyphicon-question-sign tooltip_data_info"  data-toggle="tooltip" data-placement="bottom" title="Es el plazo en que el usuario pagará el préstamo que obtiene a través de Ellice. El pago es mensual."></div>
     							<div class="proyect_data_indicador_title" id="plazo_meses">Meses de Plazo</div>
     						</div>
     						<div class="proyect_data_indicador" style="border-right:0px;">
@@ -59,7 +59,7 @@
     							<div class="proyect_data_info_bar_title">Financiado</div>
     						</div>
     						<div class="proyect_data_info_bar">
-    							<div class="proyect_data_info_bar_value"><?php echo $datos['proyecto']['tir']; ?>% <span class="proyect_data_tooltip_bar glyphicon glyphicon-question-sign"></span></div>
+    							<div class="proyect_data_info_bar_value"><?php echo $datos['proyecto']['tir']; ?>% <span class="proyect_data_tooltip_bar glyphicon glyphicon-question-sign tooltip_data_info"   data-toggle="tooltip" data-placement="bottom" title="(Tasa Interna de Retorno) Es la tasa que ve el inversionista al invertir su dinero en Eollice."></span></div>
     							<div class="proyect_data_info_bar_title">TIR</div>
     						</div>
     						<div class="proyect_data_info_bar">
@@ -85,22 +85,22 @@
 	    					<div class="proyect_informacion_item_1">
 	    						<div class="info_item_title">Tecnologia: </div>
 	    						<div class="info_item_content"><?php echo $datos['proyecto']['tecnologia'];?></div>
-	    						<div class="info_item_tooltip"><span class="glyphicon glyphicon-question-sign"></span></div>
+	    						<div class="info_item_tooltip"><span class="glyphicon glyphicon-question-sign tooltip_data_info"   data-toggle="tooltip" data-placement="bottom" title="Es el equipo que hará la conversión desde una fuente renovable a energía eléctrica útil (Solar Fotovoltaica, Eólico, entre otros)."></span></div>
 	    					</div>
 	    					<div class="proyect_informacion_item_2">
 	    						<div class="info_item_title">Tamaño (kW): </div>
 	    						<div class="info_item_content"><?php echo $datos['proyecto']['tamano'];?></div>
-	    						<div class="info_item_tooltip"><span class="glyphicon glyphicon-question-sign"></span></div>	    					
+	    						<div class="info_item_tooltip"><span class="glyphicon glyphicon-question-sign tooltip_data_info"   data-toggle="tooltip" data-placement="bottom" title="Es la cantidad de potencia instalada que el proyecto es capaz de entregar en condiciones ideales de construcción de los equipos."></span></div>	    					
 	    					</div>
 	    					<div class="proyect_informacion_item_1">
 	    						<div class="info_item_title">Energía anual Estimada: </div>
 	    						<div class="info_item_content"><?php echo $datos['proyecto']['energia_anual'];?></div>
-	    						<div class="info_item_tooltip"><span class="glyphicon glyphicon-question-sign"></span></div>	 
+	    						<div class="info_item_tooltip"><span class="glyphicon glyphicon-question-sign tooltip_data_info"   data-toggle="tooltip" data-placement="bottom" title="Es la energía que el proyecto inyectará al usuario durante todo el año."></span></div>	 
 	    					</div>
 	    					<div class="proyect_informacion_item_2">
 	    						<div class="info_item_title">Toneladas Anuales de CO2 Evitadas: </div>
 	    						<div class="info_item_content"><?php echo $datos['proyecto']['toneladas_co2'];?></div>
-	    						<div class="info_item_tooltip"><span class="glyphicon glyphicon-question-sign"></span></div>	
+	    						<div class="info_item_tooltip"><span class="glyphicon glyphicon-question-sign tooltip_data_info"   data-toggle="tooltip" data-placement="bottom" title="Es la cantidad de contaminantes que el proyecto evitará que se emitan a nuestro medio ambiente."></span></div>	
 	    					</div>
 	    					<div class="proyect_informacion_item_1">
 	    						<div class="info_item_title">Marca del Equipo: </div>
@@ -143,7 +143,7 @@
 	    								}
 	    							?>
 	    						</div>
-	    						<div class="info_item_tooltip"><span class="glyphicon glyphicon-question-sign"></span></div>	
+	    						<div class="info_item_tooltip"><span class="glyphicon glyphicon-question-sign tooltip_data_info"   data-toggle="tooltip" data-placement="bottom" title="Autoconsumo:PMGD:Comunidad Aislada"></span></div>	
 	    					</div>
 	    				</div>
 	    				<div class="ejecutor_info">
@@ -158,7 +158,7 @@
 	    					<div class="proyect_informacion_item_1">
 	    						<div class="info_item_title">Potencia Instalada a la Fecha (kW): </div>
 	    						<div class="info_item_content"><?php echo $datos['ejecutor']['potencia_instalada'];?></div>
-	    						<div class="info_item_tooltip"><span class="glyphicon glyphicon-question-sign"></span></div>	
+	    						<div class="info_item_tooltip"><span class="glyphicon glyphicon-question-sign tooltip_data_info"   data-toggle="tooltip" data-placement="bottom" title="Es la cantidad de potencia que el desarrollador del proyecto ha instalado tanto en Chile como en otros lados del mundo. "></span></div>	
 	    					</div>
 	    					<div class="proyect_informacion_item_2" style="border-bottom:none;">
 	    						<div class="info_item_title">Página web: </div>
@@ -205,7 +205,7 @@
     		</div>
     		<div class="proyect_invertir">
     			<div class="costo_por_uso">
-    				<div class="title_costo">Costo por opción de Inversion&nbsp;&nbsp;<span class="generic_tooltip glyphicon glyphicon-question-sign"></span></div>
+    				<div class="title_costo">Costo por opción de Inversion&nbsp;&nbsp;<span class="generic_tooltip glyphicon glyphicon-question-sign tooltip_data_info"   data-toggle="tooltip" data-placement="bottom" title="Es el cobro que hace Eollice al inversionista por acceder a invertir en este proyecto."></span></div>
     				<div class="content_costo">$500</div>
     				<div class="bajada_costo">Por cada $50.000 de inversion</div>
     				<div class="content_btn">

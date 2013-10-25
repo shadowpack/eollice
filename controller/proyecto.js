@@ -26,4 +26,5 @@ $(document).ready(function() {
 	$("#simulate-btn").click(function(){
 		$('#simulation-modal').modal('toggle');
 	});
+	$(".tooltip_data_info").tooltip();
 });

@@ -18,7 +18,7 @@
 					Monto a Invertir:<br>
 					Tasa de Interes:<br>
 					TIR:<br>
-					COI:&nbsp;&nbsp;<span class="glyphicon glyphicon-question-sign"></span><br>
+					COI:&nbsp;&nbsp;<span class="glyphicon glyphicon-question-sign tooltip_data_info"   data-toggle="tooltip" data-placement="bottom" title="Es el cobro que hace Eollice al inversionista por acceder a invertir en este proyecto."></span><br>
 					Utilidades:
 				</div>
 				<div class="invertir-body-leftlayer-data">
@@ -95,18 +95,18 @@
 			<div class="pago-transferencia"><div class="textfloat">Transfiere </div><div class="pago-coi" id="coi_final">$<?php echo number_format($inversion['coi'],0,",","."); ?></div><div class="textfloat"> a la siguiente cuenta.</div></div>
 			<div class="pago-cuenta">
 				<b>Datos de la Cuenta Eollice</b><br>
-				<b>N° de Cuenta:</b> 00-789-123-9<br>
+				<b>N° de Cuenta:</b> 86887220<br>
 				<b>Banco:</b> Banco de Credito e Inversiones<br>
-				<b>Rut:</b> 76.998.987-7<br>
+				<b>Rut:</b> 16.286.235-9<br>
 				<b>Tipo de Cuenta:</b> Cuenta Corriente<br>
-				<b>Razón Social:</b> Eollice SpA.<br>
-				<b>E-Mail:</b> transferencias@eollice.com
+				<b>Razón Social:</b> Francisco Javier Sepulveda Martinez<br>
+				<b>E-Mail:</b> contacto@eollice.com
 			</div>
-			<div class="pago-envio"><div class="textfloat">Reenvía el correo de confirmación de transferencia a transferencias@eollice con este código en el asunto:</div><div class="pago-codigo"><?php echo $inversion['token_transaccion']; ?></div></div>
+			<div class="pago-envio"><div class="textfloat">Reenvía el correo de confirmación de transferencia a contacto@eollice con este código en el asunto:</div><div class="pago-codigo"><?php echo $inversion['token_transaccion']; ?></div></div>
 			<div class="pago-instrucciones">Una vez que hallas hecho los pasos anteriores, aprieta el boton confirmar transferencia.</div>
 			<div class="pago-accion-confirmar">
 				<button type="button" class="btn btn-info btn-lg btn-finals" id="send_mail"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Enviar Indicaciones a mi E-Mail</button>
-				<button type="button" class="btn btn-primary btn-lg btn-finals" id="confirm_founding"><span class="glyphicon glyphicon-ok-circle"></span>&nbsp;&nbsp;Confirmar Inversion</button>
+				<button type="button" class="btn btn-primary btn-lg btn-finals" id="confirm_founding"><span class="glyphicon glyphicon-ok-circle"></span>&nbsp;&nbsp;Confirmar Transferencia</button>
 			</div>
 		</div>
 	</div>

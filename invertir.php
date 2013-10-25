@@ -1,6 +1,7 @@
 <?php
   session_start();
   require_once('model/db_core.php');
+  include_once('model/connection.php');
 ?>
 <!-- DECLARAMOS QUE CONSISTE EN UN DOCUMENTO HTML5 -->
 <!DOCTYPE html>
@@ -41,5 +42,6 @@
   <?php require_once("view/add_banco.php"); ?>
   <?php require_once("view/simulation.php"); ?>
   <?php require_once("view/confirm-modal.php"); ?>
+  <?php require_once("view/logmodal.php"); ?>
 </body>
 </html>

@@ -38,5 +38,7 @@
   <?php require_once("view/definePassword.php"); ?>
   <?php require_once("view/uservoice.php"); ?>
   <?php require_once("view/user_terms.php"); ?>
+  <?php require_once("view/logmodal.php"); ?>
+  <?php require_once("view/confirm-modal.php"); ?>
 </body>
 </html>

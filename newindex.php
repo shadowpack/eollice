@@ -26,11 +26,14 @@
 </head>
 <body>
 	<!-- INCLUIMOS EL HEADER -->
+  <div class="background"></div>
 	<?php require_once("view/header.php"); ?>
 	<!-- ELEMENTOS DE BODY -->
-	<div class="jumbotron jumboClass">
-	</div>
-	<div class="container">	    	
+	
+	<div class="container">	   
+    <div class="row">
+        <div class="col-md-12 esp40" style="height:200px;"></div>
+      </div>
   		<?php 
       if(isset($_SESSION['token'])){
         $db = new db_core();

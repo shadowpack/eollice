@@ -40,5 +40,7 @@
   <?php require_once("view/user_terms.php"); ?>
   <?php require_once("view/simulation.php"); ?>
   <?php require_once("view/contrato.php"); ?>
+  <?php require_once("view/logmodal.php"); ?>
+  <?php require_once("view/confirm-modal.php"); ?>
 </body>
 </html>

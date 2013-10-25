@@ -18,7 +18,7 @@
   </div><!-- /.modal -->
 
 <!-- Modal -->
-  <div class="modal fade" id="loginInactive" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal fade" id="loginInactiveModal" tabindex="-1" role="dialog" aria-labelledby="loginInactive" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
